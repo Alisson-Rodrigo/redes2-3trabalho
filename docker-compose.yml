@@ -1,0 +1,87 @@
+version: "3.9"
+
+networks:
+  redes_net:
+    driver: bridge
+    ipam:
+      config:
+        - subnet: 54.26.0.0/24
+
+services:
+
+  nginx:
+    build: .
+    container_name: nginx_server
+    command: ["nginx", "-g", "daemon off;"]
+    volumes:
+      - ./configs/nginx.conf:/etc/nginx/nginx.conf
+      - ./static:/var/www/html
+    networks:
+      redes_net:
+        ipv4_address: 54.26.0.10
+    ports:
+      - "8081:80"
+
+  apache:
+    build: .
+    container_name: apache_server
+    command: ["apache2ctl", "-D", "FOREGROUND"]
+    volumes:
+      - ./configs/apache.conf:/etc/apache2/sites-enabled/000-default.conf
+      - ./static:/var/www/html
+    networks:
+      redes_net:
+        ipv4_address: 54.26.0.11
+    ports:
+      - "8082:80"
+
+  nginx_exporter:
+    image: nginx/nginx-prometheus-exporter
+    command: -nginx.scrape-uri=http://nginx:80/stub_status
+    networks:
+      redes_net:
+        ipv4_address: 54.26.0.20
+    ports:
+      - "9113:9113"
+
+  apache_exporter:
+    image: lusotycoon/apache-exporter
+    networks:
+      redes_net:
+        ipv4_address: 54.26.0.21
+    environment:
+      - APACHE_STATUS_URL=http://apache/server-status
+    ports:
+      - "9117:9117"
+
+  prometheus:
+    image: prom/prometheus
+    volumes:
+      - ./configs/prometheus.yml:/etc/prometheus/prometheus.yml
+    networks:
+      redes_net:
+        ipv4_address: 54.26.0.30
+    ports:
+      - "9090:9090"
+
+  grafana:
+    image: grafana/grafana
+    networks:
+      redes_net:
+        ipv4_address: 54.26.0.31
+    ports:
+      - "3000:3000"
+
+  k6:
+    image: grafana/k6
+    container_name: redes2-3trabalho-k6-1
+    networks:
+      redes_net:
+        ipv4_address: 54.26.0.40
+    volumes:
+      - ./k6:/k6files
+    entrypoint: ["sh", "-c", "while true; do sleep 3600; done"]
+
+
+
+
