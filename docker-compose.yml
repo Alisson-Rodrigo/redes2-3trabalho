@@ -72,16 +72,6 @@ services:
     ports:
       - "3000:3000"
 
-  k6:
-    image: grafana/k6
-    container_name: redes2-3trabalho-k6-1
-    networks:
-      redes_net:
-        ipv4_address: 54.26.0.40
-    volumes:
-      - ./k6:/k6files
-    entrypoint: ["sh", "-c", "while true; do sleep 3600; done"]
-
   ab:
     image: jordi/ab
     container_name: redes2-3trabalho-ab
