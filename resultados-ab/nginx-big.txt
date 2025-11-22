@@ -24,30 +24,30 @@ Document Path:          /bigfile.txt
 Document Length:        10129870 bytes
 
 Concurrency Level:      20
-Time taken for tests:   94.335 seconds
+Time taken for tests:   92.485 seconds
 Complete requests:      1500
 Failed requests:        0
 Total transferred:      15195181500 bytes
 HTML transferred:       15194805000 bytes
-Requests per second:    15.90 [#/sec] (mean)
-Time per request:       1257.797 [ms] (mean)
-Time per request:       62.890 [ms] (mean, across all concurrent requests)
-Transfer rate:          157301.91 [Kbytes/sec] received
+Requests per second:    16.22 [#/sec] (mean)
+Time per request:       1233.133 [ms] (mean)
+Time per request:       61.657 [ms] (mean, across all concurrent requests)
+Transfer rate:          160448.22 [Kbytes/sec] received
 
 Connection Times (ms)
               min  mean[+/-sd] median   max
-Connect:        0    0   0.1      0       1
-Processing:    53 1250 516.8   1122    4016
-Waiting:        1 1188 504.9   1068    3950
-Total:         53 1250 516.8   1122    4016
+Connect:        0    0   0.0      0       1
+Processing:    60 1226 427.6   1145    3887
+Waiting:        1 1165 416.6   1088    3829
+Total:         60 1226 427.6   1145    3887
 
 Percentage of the requests served within a certain time (ms)
-  50%   1122
-  66%   1172
+  50%   1145
+  66%   1178
   75%   1203
-  80%   1234
-  90%   1325
-  95%   1415
-  98%   3811
-  99%   3892
- 100%   4016 (longest request)
+  80%   1229
+  90%   1294
+  95%   1372
+  98%   3797
+  99%   3849
+ 100%   3887 (longest request)
