@@ -3,9 +3,17 @@ Copyright 1996 Adam Twiss, Zeus Technology Ltd, http://www.zeustech.net/
 Licensed to The Apache Software Foundation, http://www.apache.org/
 
 Benchmarking nginx (be patient)
-Completed 100 requests
-Completed 200 requests
-Finished 200 requests
+Completed 150 requests
+Completed 300 requests
+Completed 450 requests
+Completed 600 requests
+Completed 750 requests
+Completed 900 requests
+Completed 1050 requests
+Completed 1200 requests
+Completed 1350 requests
+Completed 1500 requests
+Finished 1500 requests
 
 
 Server Software:        nginx/1.18.0
@@ -15,31 +23,31 @@ Server Port:            80
 Document Path:          /bigfile.txt
 Document Length:        10129870 bytes
 
-Concurrency Level:      5
-Time taken for tests:   13.283 seconds
-Complete requests:      200
+Concurrency Level:      20
+Time taken for tests:   94.335 seconds
+Complete requests:      1500
 Failed requests:        0
-Total transferred:      2026024200 bytes
-HTML transferred:       2025974000 bytes
-Requests per second:    15.06 [#/sec] (mean)
-Time per request:       332.076 [ms] (mean)
-Time per request:       66.415 [ms] (mean, across all concurrent requests)
-Transfer rate:          148952.38 [Kbytes/sec] received
+Total transferred:      15195181500 bytes
+HTML transferred:       15194805000 bytes
+Requests per second:    15.90 [#/sec] (mean)
+Time per request:       1257.797 [ms] (mean)
+Time per request:       62.890 [ms] (mean, across all concurrent requests)
+Transfer rate:          157301.91 [Kbytes/sec] received
 
 Connection Times (ms)
               min  mean[+/-sd] median   max
-Connect:        0    0   0.0      0       0
-Processing:    72  329 242.1    286    2182
-Waiting:        2  263 203.1    229    1557
-Total:         72  329 242.1    286    2182
+Connect:        0    0   0.1      0       1
+Processing:    53 1250 516.8   1122    4016
+Waiting:        1 1188 504.9   1068    3950
+Total:         53 1250 516.8   1122    4016
 
 Percentage of the requests served within a certain time (ms)
-  50%    286
-  66%    293
-  75%    299
-  80%    302
-  90%    308
-  95%    319
-  98%   1606
-  99%   1612
- 100%   2182 (longest request)
+  50%   1122
+  66%   1172
+  75%   1203
+  80%   1234
+  90%   1325
+  95%   1415
+  98%   3811
+  99%   3892
+ 100%   4016 (longest request)

@@ -3,12 +3,17 @@ Copyright 1996 Adam Twiss, Zeus Technology Ltd, http://www.zeustech.net/
 Licensed to The Apache Software Foundation, http://www.apache.org/
 
 Benchmarking nginx (be patient)
-Completed 100 requests
-Completed 200 requests
-Completed 300 requests
-Completed 400 requests
 Completed 500 requests
-Finished 500 requests
+Completed 1000 requests
+Completed 1500 requests
+Completed 2000 requests
+Completed 2500 requests
+Completed 3000 requests
+Completed 3500 requests
+Completed 4000 requests
+Completed 4500 requests
+Completed 5000 requests
+Finished 5000 requests
 
 
 Server Software:        nginx/1.18.0
@@ -18,31 +23,31 @@ Server Port:            80
 Document Path:          /small.html
 Document Length:        199 bytes
 
-Concurrency Level:      20
-Time taken for tests:   0.513 seconds
-Complete requests:      500
+Concurrency Level:      100
+Time taken for tests:   5.364 seconds
+Complete requests:      5000
 Failed requests:        0
-Total transferred:      220000 bytes
-HTML transferred:       99500 bytes
-Requests per second:    974.38 [#/sec] (mean)
-Time per request:       20.526 [ms] (mean)
-Time per request:       1.026 [ms] (mean, across all concurrent requests)
-Transfer rate:          418.68 [Kbytes/sec] received
+Total transferred:      2200000 bytes
+HTML transferred:       995000 bytes
+Requests per second:    932.20 [#/sec] (mean)
+Time per request:       107.273 [ms] (mean)
+Time per request:       1.073 [ms] (mean, across all concurrent requests)
+Transfer rate:          400.55 [Kbytes/sec] received
 
 Connection Times (ms)
               min  mean[+/-sd] median   max
-Connect:        0    0   0.1      0       1
-Processing:     1   20   2.4     20      22
-Waiting:        1   20   2.4     20      21
-Total:          2   20   2.3     20      22
+Connect:        0    0   0.4      0       4
+Processing:     1  106  22.6    102     192
+Waiting:        1  105  22.6    101     192
+Total:          5  106  22.5    102     192
 
 Percentage of the requests served within a certain time (ms)
-  50%     20
-  66%     21
-  75%     21
-  80%     21
-  90%     21
-  95%     21
-  98%     22
-  99%     22
- 100%     22 (longest request)
+  50%    102
+  66%    105
+  75%    108
+  80%    110
+  90%    138
+  95%    155
+  98%    177
+  99%    181
+ 100%    192 (longest request)
