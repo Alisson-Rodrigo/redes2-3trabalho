@@ -24,30 +24,32 @@ Document Path:          /medium.json
 Document Length:        211 bytes
 
 Concurrency Level:      50
-Time taken for tests:   0.631 seconds
+Time taken for tests:   0.507 seconds
 Complete requests:      3000
 Failed requests:        0
 Total transferred:      1395000 bytes
 HTML transferred:       633000 bytes
-Requests per second:    4757.16 [#/sec] (mean)
-Time per request:       10.510 [ms] (mean)
-Time per request:       0.210 [ms] (mean, across all concurrent requests)
-Transfer rate:          2160.23 [Kbytes/sec] received
+Requests per second:    5921.42 [#/sec] (mean)
+Time per request:       8.444 [ms] (mean)
+Time per request:       0.169 [ms] (mean, across all concurrent requests)
+Transfer rate:          2688.93 [Kbytes/sec] received
 
 Connection Times (ms)
               min  mean[+/-sd] median   max
-Connect:        0    2   1.5      3       8
-Processing:     3    8   3.7      7      35
-Waiting:        2    6   2.9      5      32
-Total:          3   10   3.3      9      35
+Connect:        0    3   0.8      3       5
+Processing:     2    6   1.2      5      12
+Waiting:        2    5   1.0      4      10
+Total:          3    8   1.1      8      14
+WARNING: The median and mean for the waiting time are not within a normal deviation
+        These results are probably not that reliable.
 
 Percentage of the requests served within a certain time (ms)
-  50%      9
-  66%     10
-  75%     11
-  80%     12
-  90%     14
-  95%     17
-  98%     20
-  99%     23
- 100%     35 (longest request)
+  50%      8
+  66%      9
+  75%      9
+  80%      9
+  90%     10
+  95%     10
+  98%     11
+  99%     12
+ 100%     14 (longest request)
