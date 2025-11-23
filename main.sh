@@ -12,9 +12,5 @@ docker compose up -d
 echo "[4] Verificando serviços..."
 docker ps
 
-echo "[5] Testando conectividade:"
-ping -n 2 54.26.0.10
-ping -n 2 54.26.0.11
-
 
 echo "Ambiente iniciado com sucesso!"
