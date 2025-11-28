@@ -4,6 +4,10 @@ Este projeto realiza testes de desempenho entre os servidores NGINX e Apache HTT
 
 O objetivo é comparar métricas como requisições por segundo, erros, conexões e processamento. O ambiente é totalmente automatizado através de scripts em shell.
 
+Link do video: https://youtu.be/5EZxYEzfW5c?si=iz5R-7jT0fuu1Zuy
+
+Link do github https://github.com/Alisson-Rodrigo/redes2-3trabalho.git
+
 ---
 
 ## Pré-requisitos
@@ -56,7 +60,7 @@ https://git-scm.com/downloads
 ### 1. Clonar o repositório
 
 ```bash
-git clone https://github.com/Alisson-Rodrigo/redes2-3trabalho
+git clone https://github.com/Alisson-Rodrigo/redes2-3trabalho.git
 cd redes2-3trabalho
 ```
 
